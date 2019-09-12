@@ -5,11 +5,21 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["mytime.js"]
+      "js": ["content.js"]
     }
   ],
   "browser_action": {
     "default_popup": "mytime.html",
-    "default_title": "timeClock"
+    "default_title": "timeClock",
+    "default_icon": "myTime.png"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens myTime.html"
+    }
   }
 }
